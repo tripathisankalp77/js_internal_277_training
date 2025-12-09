@@ -19,4 +19,5 @@ console.log(typeof score)
 //typecasting 
 let vmane=Number(score)
 console.log(typeof(vmane))
+//NaN will appear , type cast dosent happens 
 console.log((vmane))
