@@ -206,3 +206,85 @@ console.log("var global "+va)
 // • ≥75 B 
 // • ≥50 C 
 // • else Fail
+//let man=prompt("enter a number")
+
+// {
+//     const readline = require("readline-sync");
+//     console.log("Enter input : ")
+//     let num = Number(readline.question());
+//     console.log(num)
+// }
+
+//20. Create a function which takes *two numbers & an operator (+, -, , /) and performs 
+{
+    function operation(a,b){
+        let add=a+b
+        let mul=a*b
+        let sub=a-b
+        let div=1
+        if(b!=0){
+            div=a/b;
+        }
+        console.log("add "+add)
+        console.log("mul "+mul)
+        console.log("sub "+sub)
+        console.log("div "+div)
+    }
+    operation(5,10)
+} 
+//Write a function to count vowels in a string.
+{
+    let s="sankalp tripathi"
+    let count=0
+    for(let i=0;i<s.length;i++){
+        if(s[i]=="a" ||s[i]=="e" ||s[i]=="i" ||s[i]=="o" ||s[i]=="u" )
+            count++;
+    }
+    console.log("number of vowels: "+ count)
+}
+// Print the Fibonacci series up to n terms.
+{   
+    
+    function fib(n){
+        let n1=0
+        let n2=1
+        for(let i=1;i<=n;i++){
+            if(i==1) 
+                console.log(0+" ")
+            else if(i==2)
+                console.log(1+" ")
+            else{
+                let sum=n1+n2
+                console.log(sum+" ")
+                n1=n2
+                n2=sum
+            }
+        }
+
+    }
+    fib(8)
+}
+//Write a function that returns minimum and maximum from an array.
+{
+    let arr=[1,5,2,8,0,9,4]
+    //let arr1 = [1, 2, 3, 4];
+    //greatest element 
+    for(let i=0;i<arr.length-1;i++){
+        if(arr[i]>arr[i+1]){
+            let temp=arr[i]
+            arr[i]=arr[i+1]
+            arr[i+1]=temp
+        }
+    }
+    console.log("greatest element is: "+ arr[arr.length-1])
+    //smallest elemnet
+    let min=0;
+    for(let i=1;i<arr.length;i++){
+        if(arr[min]>arr[i]){
+            let temp=arr[min]
+            arr[min]=arr[i]
+            arr[i]=temp
+        }
+    }
+    console.log("smallest element is: "+ arr[min])
+}
