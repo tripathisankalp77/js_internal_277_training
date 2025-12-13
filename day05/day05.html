@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM & Events (Day-4)</title>
+</head>
+<body>
+    <!-- Task 1: Change Text on Button Click  -->
+     <!-- Create an HTML page with a <p> tag and a <button>. 
+        When user clicks the button, change text to "Welcome to JavaScript!"  -->
+        <h1 id="p1"></h1><br>
+        <button id="b1">welcom</button><br>
+        <button id="b2">Red</button><br>
+        <button id="b3">Blue</button><br>
+        <button id="b4">Green</button><br>
+        <img id="ig1" src="/day05/arish.png" alt="Ariash" height="100"><hr>
+        <button id="igb1">next</button>
+        <button id="igb2">previous</button>
+        <script>
+            document.getElementById("b1").addEventListener("click",function(){
+                document.getElementById("p1").innerHTML="Welcome to JavaScript!";
+            });
+            document.getElementById("b2").addEventListener("click",function(){
+                document.body.style.backgroundColor="red";
+            });
+            document.getElementById("b3").addEventListener("click",function(){
+                document.body.style.backgroundColor="blue";
+            });
+            document.getElementById("b4").addEventListener("click",function(){
+                document.body.style.backgroundColor="green";
+            });
+            {
+                let images=["/day05/arish.png","/day05/R.jpeg","/day05/aA.jpg"];
+                let index=0;
+                document.getElementById("igb1").addEventListener("click",function(){
+                    index=(index+1)%images.length;
+                    document.getElementById("ig1").src=images[index];
+                });
+                document.getElementById("igb2").addEventListener("click",function(){
+                    index=(index-1+images.length)%images.length;
+                    document.getElementById("ig1").src=images[index];
+                });
+            }  
+        </script>
+</body>
+</html>
+<!-- Task 3: Image Switcher 
+Create an <img> tag and two buttons Next & Previous. 
+Clicking buttons should switch between two images.  -->
