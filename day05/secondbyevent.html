@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT</title>
+</head>
+<body>
+    <h1 id="h1">hello one</h1>
+    <h2 id="h2">hello two</h2>
+    <button id="b1"> click_1</button>
+    <button id="b2">click_2</button>
+    <button id="b3">change_color</button>
+    <button id="b5">change_H2_color</button>
+    <script>
+        document.getElementById("b1").addEventListener("click",function(){
+            document.getElementById("h1").innerHTML="changed by event listener one";
+        });
+        document.getElementById("b2").addEventListener("click",function(){
+            document.getElementById("h2").innerHTML="changed by event listener two";
+        });
+        document.getElementById("b3").addEventListener("click",function(){
+            document.body.style.backgroundColor="lightblue";
+        });
+        // document.getElementById("b4").addEventListener("click",function(){
+        //     document.getElementById("h2").style.color="yellow";
+        // });
+        //document.getElementById("h2").style.color="yellow";
+    </script>
+    
+</body>
+</html>

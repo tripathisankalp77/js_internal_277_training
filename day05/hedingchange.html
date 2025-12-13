@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTING VALUE</title>
+</head>
+<body>
+    <h1>headind first is large</h1>
+    <h2>heading second is small</h2>
+    <button onclick="fun()">CLICK ME TO CHANGE HEADINGS</button>id1
+    <button id="bid1">second</button>
+    <script>
+        document.getElementById("bid1").addEventListener("click",function(){
+            document.getElementById("h1").innerHTML="change by evetlistener";
+        });
+        function fun(){
+            document.getElementById("h1").innerHTML="changed first";
+            document.getElementById("h2").innerHTML="changed second";
+        }
+    </script>
+    
+</body>
+</html>
