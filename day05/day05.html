@@ -9,42 +9,65 @@
     <!-- Task 1: Change Text on Button Click  -->
      <!-- Create an HTML page with a <p> tag and a <button>. 
         When user clicks the button, change text to "Welcome to JavaScript!"  -->
-        <h1 id="p1"></h1><br>
+        <!-- <h1 id="p1"></h1><br>
         <button id="b1">welcom</button><br>
         <button id="b2">Red</button><br>
         <button id="b3">Blue</button><br>
-        <button id="b4">Green</button><br>
-        <img id="ig1" src="/day05/arish.png" alt="Ariash" height="100"><hr>
+        <button id="b4">Green</button><br><hr>
+        <img id="ig1" src="/day05/arish.png" alt="Ariash" height="100"><br>
         <button id="igb1">next</button>
-        <button id="igb2">previous</button>
+        <button id="igb2">previous</button><hr><hr> -->
+        <p id="para1">
+            Astronomy is a natural science that studies celestial objects and the phenomena
+            that occur in the cosmos. It uses mathematics, physics, and chemistry to explain
+            their origin and their overall evolution. Objects of interest include planets, moons,
+            stars, nebulae, galaxies, meteoroids, asteroids, and comets. Relevant phenomena include
+            supernova explosions, gamma ray bursts, quasars, blazars, pulsars, and cosmic microwave
+            background radiation. More generally, astronomy studies everything that originates beyond 
+            Earth's atmosphere. 
+            Cosmology is the branch of astronomy that studies the universe as a whole.
+        </p>
+        <button id="paraid1">hide paragraph</button>
+        <button id="paraid2">show paragraph</button>
         <script>
-            document.getElementById("b1").addEventListener("click",function(){
-                document.getElementById("p1").innerHTML="Welcome to JavaScript!";
+            // document.getElementById("b1").addEventListener("click",function(){
+            //     document.getElementById("p1").innerHTML="Welcome to JavaScript!";
+            // });
+            // document.getElementById("b2").addEventListener("click",function(){
+            //     document.body.style.backgroundColor="red";
+            // });
+            // document.getElementById("b3").addEventListener("click",function(){
+            //     document.body.style.backgroundColor="blue";
+            // });
+            // document.getElementById("b4").addEventListener("click",function(){
+            //     document.body.style.backgroundColor="green";
+            // });
+            // {
+            //     let images=["/day05/arish.png","/day05/R.jpeg","/day05/aA.jpg"];
+            //     let index=0;
+            //     document.getElementById("igb1").addEventListener("click",function(){
+            //         index=(index+1)%images.length;
+            //         document.getElementById("ig1").src=images[index];
+            //     });
+            //     document.getElementById("igb2").addEventListener("click",function(){
+            //         index=(index-1+images.length)%images.length;
+            //         document.getElementById("ig1").src=images[index];
+            //     });
+            // }  
+            document.getElementById("paraid1").addEventListener("click",function(){
+                document.getElementById("para1").style.display="none";
             });
-            document.getElementById("b2").addEventListener("click",function(){
-                document.body.style.backgroundColor="red";
+            document.getElementById("paraid2").addEventListener("click",function(){
+                document.getElementById("para1").style.display="block";
             });
-            document.getElementById("b3").addEventListener("click",function(){
-                document.body.style.backgroundColor="blue";
-            });
-            document.getElementById("b4").addEventListener("click",function(){
-                document.body.style.backgroundColor="green";
-            });
-            {
-                let images=["/day05/arish.png","/day05/R.jpeg","/day05/aA.jpg"];
-                let index=0;
-                document.getElementById("igb1").addEventListener("click",function(){
-                    index=(index+1)%images.length;
-                    document.getElementById("ig1").src=images[index];
-                });
-                document.getElementById("igb2").addEventListener("click",function(){
-                    index=(index-1+images.length)%images.length;
-                    document.getElementById("ig1").src=images[index];
-                });
-            }  
         </script>
 </body>
 </html>
-<!-- Task 3: Image Switcher 
-Create an <img> tag and two buttons Next & Previous. 
-Clicking buttons should switch between two images.  -->
+ <!-- Task 3: Image Switcher 
+// Create an <img> tag and two buttons Next & Previous. 
+// Clicking buttons should switch between two images.  -->
+ <!-- Task 4: Show/Hide Paragraph 
+// Create a paragraph and a button. 
+// Click button → hide paragraph 
+// Click again → show paragraph 
+// (hint: style.display = "none" / "block")  -->

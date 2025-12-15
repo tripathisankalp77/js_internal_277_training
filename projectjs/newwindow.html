@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newwindow</title>
+</head>
+<body>
+    <h1 id="hd1">hello user</h1>
+    <script>
+        let params=new URLSearchParams(window.location.search);//to get the parameters from url
+        //jis windows se aye the uska parameter le aye ga 
+        let na=params.get("firstid");//to get specific parameter value
+        // document.getElementById("hd1").innerHTML=`welcome ${na}! `;
+        document.getElementById("hd1").innerHTML=`welcome ${na}! `;
+
+    </script>
+</body>
+</html>
