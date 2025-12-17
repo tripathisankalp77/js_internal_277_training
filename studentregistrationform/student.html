@@ -145,7 +145,8 @@
 
 <script>
 document.getElementById("regForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+    //after the form submition will perform all validation
+    e.preventDefault();// prevent form submission
 
     let error = document.getElementById("error");
     let output = document.getElementById("output");
