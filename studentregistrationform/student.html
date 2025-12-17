@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #74ebd5, #9face6);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: #fff;
+            padding: 25px 30px;
+            width: 420px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .field {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .gender {
+            display: flex;
+            gap: 15px;
+        }
+
+        .terms {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #6c63ff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #5548d9;
+        }
+
+        #error {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        #output {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Registration</h2>
+
+    <form id="regForm">
+        <div class="field">
+            <label>Name</label>
+            <input type="text" id="name">
+        </div>
+
+        <div class="field">
+            <label>Email</label>
+            <input type="email" id="email">
+        </div>
+
+        <div class="field">
+            <label>Gender</label>
+            <div class="gender">
+                <label><input type="radio" name="gender" value="Male"> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Course</label>
+            <select id="course">
+                <option value="">--Select Course--</option>
+                <option>Java</option>
+                <option>JavaScript</option>
+                <option>Python</option>
+                <option>React</option>
+            </select>
+        </div>
+
+        <div class="field terms">
+            <input type="checkbox" id="terms">
+            <label>I agree to Terms & Conditions</label>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p id="error"></p>
+
+    <div id="output"></div>
+</div>
+
+<script>
+document.getElementById("regForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let error = document.getElementById("error");
+    let output = document.getElementById("output");
+
+    error.innerText = "";
+    output.innerHTML = "";
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let course = document.getElementById("course").value;
+    let terms = document.getElementById("terms").checked;
+
+    let gender = "";
+    let g = document.getElementsByName("gender");
+    for (let x of g) {
+        if (x.checked) {
+            gender = x.value;
+        }
+    }
+
+    if (name === "") {
+        error.innerText = "Name should not be empty";
+        return;
+    }
+
+    if (email === "") {
+        error.innerText = "Email should be valid";
+        return;
+    }
+
+    if (gender === "") {
+        error.innerText = "Gender must be selected";
+        return;
+    }
+
+    if (course === "") {
+        error.innerText = "Course must be selected";
+        return;
+    }
+
+    if (!terms) {
+        error.innerText = "Terms checkbox must be checked";
+        return;
+    }
+
+    output.innerHTML = `
+        <p class="success">Registration Successful!</p>
+        <p>Name: ${name}</p>
+        <p>Email: ${email}</p>
+        <p>Gender: ${gender}</p>
+        <p>Course: ${course}</p>
+    `;
+});
+</script>
+
+</body>
+</html>
