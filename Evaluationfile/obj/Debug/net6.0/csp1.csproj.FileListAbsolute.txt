@@ -1,0 +1,5 @@
+/workspaces/js_internal_277_training/Evaluationfile/obj/Debug/net6.0/csp1.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/js_internal_277_training/Evaluationfile/obj/Debug/net6.0/csp1.AssemblyInfoInputs.cache
+/workspaces/js_internal_277_training/Evaluationfile/obj/Debug/net6.0/csp1.AssemblyInfo.cs
+/workspaces/js_internal_277_training/Evaluationfile/obj/Debug/net6.0/csp1.csproj.CoreCompileInputs.cache
+/workspaces/js_internal_277_training/Evaluationfile/obj/Debug/net6.0/csp1.sourcelink.json
