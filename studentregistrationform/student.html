@@ -167,32 +167,32 @@ document.getElementById("regForm").addEventListener("submit", function(e) {
             gender = x.value;
         }
     }
-
+//name validation
     if (name === "") {
         error.innerText = "Name should not be empty";
         return;
     }
-
+//email validation
     if (email === "") {
         error.innerText = "Email should be valid";
         return;
     }
-
+//gender validation radio button format least one should be selected
     if (gender === "") {
         error.innerText = "Gender must be selected";
         return;
     }
-
+//course validation dropdown format
     if (course === "") {
         error.innerText = "Course must be selected";
         return;
     }
-
+//terms and condition validation checkbox format
     if (!terms) {
         error.innerText = "Terms checkbox must be checked";
         return;
     }
-
+//if all validation is correct then show the output below the form
     output.innerHTML = 
     `
         <p class="success">Registration Successful!</p>
