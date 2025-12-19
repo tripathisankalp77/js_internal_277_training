@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "A/RuNgjjdys=",
+  "dgSpecHash": "WKx0mHzRjug=",
   "success": true,
   "projectFilePath": "/workspaces/js_internal_277_training/Evaluationfile/csp1.csproj",
   "expectedPackageFiles": [
-    "/home/node/.nuget/packages/microsoft.netcore.app.ref/6.0.36/microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
-    "/home/node/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.36/microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
-    "/home/node/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.36/microsoft.netcore.app.host.linux-x64.6.0.36.nupkg.sha512"
+    "/home/node/.nuget/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "/home/node/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
+    "/home/node/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.22/microsoft.netcore.app.host.linux-x64.8.0.22.nupkg.sha512"
   ],
   "logs": []
 }
