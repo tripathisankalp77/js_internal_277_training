@@ -22,3 +22,30 @@ for(let div of box){
     div.innerText=`changet ${idx}`;
     idx++;
 }
+
+let btn=document.createElement("button");
+btn.innerText="Click Me";
+btn.style.backgroundColor="red";
+btn.style.color="white";
+document.querySelector("body").prepend(btn);
+
+let btnLightMode=document.createElement("button");
+btnLightMode.setAttribute("id","bt1");
+btnLightMode.innerText="Light Mode";
+btnLightMode.style.backgroundColor="yellow";
+btnLightMode.style.color="black";
+document.querySelector("body").append(btnLightMode);
+let mode="light";
+
+
+document.addEventListener("click",function(){
+    if(mode=="light"){
+        mode="dark";
+        document.querySelector("body").style.backgroundColor="black";
+        
+    }else{
+        mode="light";
+        document.querySelector("body").style.backgroundColor="white";   
+    }
+    console.log(mode);
+});
